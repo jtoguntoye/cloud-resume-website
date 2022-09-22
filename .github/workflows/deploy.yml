@@ -20,5 +20,5 @@ jobs:
             aws-region: eu-west-3
             
       - run: aws s3 sync ./src s3://cloud-resume-static-website-bucket
-      - run: aws cloudfront create-invalidation --distribution-id E3RFLKCOZPHSM4  --paths /\*
+      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_ID }}  --paths /\*
 
