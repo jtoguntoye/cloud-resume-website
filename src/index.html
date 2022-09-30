@@ -6,7 +6,7 @@
                 .then(() => fetch('https://n7rsotpjo6.execute-api.eu-west-3.amazonaws.com/test/get'))
                 .then(response => response.json())
                 .then((data) => {
-                    document.getElementById('record_id').innerText = data.body.visitor_count
+                    document.getElementById('record_id').innerText = data.body
             }) 
         </script>
         <title>Joel Oguntoye Cloud</title>
