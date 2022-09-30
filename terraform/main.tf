@@ -8,6 +8,9 @@ resource "aws_s3_bucket" "cloud-resume-static-website-bucket" {
 }
 
 resource "aws_cloudfront_distribution" "website_distribution" {
+  depends_on = [
+    aws_s3_bucket.cloud-resume-static-website-bucket
+  ]
   aliases = [
     "joe-resume.com",
     "www.joe-resume.com",
