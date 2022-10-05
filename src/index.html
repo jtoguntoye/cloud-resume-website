@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            fetch('https://n7rsotpjo6.execute-api.eu-west-3.amazonaws.com/test/put')
+        <script type="text/javascript">
+            function codeAddress() {
+                fetch('https://n7rsotpjo6.execute-api.eu-west-3.amazonaws.com/test/put')
                 .then(() => fetch('https://n7rsotpjo6.execute-api.eu-west-3.amazonaws.com/test/get'))
                 .then(response => response.json())
                 .then((response) => {
-                    document.getElementById('record_id').innerHTML = response.body
-            }) 
-        </script>
+                    document.getElementById('record_id').textContent = response.body
+            })
+            }
+            window.onload = codeAddress;
+            </script>
         <title>Joel Oguntoye Cloud</title>
         <link rel="stylesheet" href="style.css" type="text/css">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -96,7 +99,7 @@
                         <p>Scripting/programming Languages: Bash, Python, Java, Kotlin</p>
                     </div> 
                 </div>
-                <p class="visits" style="text-align: center;">Number of Unique Visitors: # <span id="record_id"></span> </p>
+                <p class="visits" style="text-align: center;">Number of Visitors: # <span id="record_id"></span> </p>
             </div>
         </div>
     </body>
