@@ -3,8 +3,8 @@
     <head>
         <script type="text/javascript">
             function codeAddress() {
-                fetch('https://n7rsotpjo6.execute-api.eu-west-3.amazonaws.com/test/put')
-                .then(() => fetch('https://n7rsotpjo6.execute-api.eu-west-3.amazonaws.com/test/get'))
+                fetch('https://n7rsotpjo6.execute-api.eu-west-3.amazonaws.com/test/')
+                .then(() => fetch('https://n7rsotpjo6.execute-api.eu-west-3.amazonaws.com/test/'))
                 .then(response => response.json())
                 .then((response) => {
                     document.getElementById('record_id').textContent = response.body
